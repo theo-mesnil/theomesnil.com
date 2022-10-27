@@ -1,6 +1,9 @@
-import '../styles/globals.css'
+// eslint-disable-next-line import/no-unresolved
+import { Analytics } from '@vercel/analytics/react'
+
 import type { AppProps } from 'next/app'
-import { Analytics } from '@vercel/analytics/react';
+
+import '../styles/globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
