@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import Icon from '../Icon'
+
 import styles from './index.module.css'
 
 export default function Header() {
@@ -16,6 +18,9 @@ export default function Header() {
           </li>
           <li>
             <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Icon name="sun" />
           </li>
         </ul>
       </nav>

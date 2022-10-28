@@ -15,10 +15,6 @@
   --space-xxl: 2.5rem; /* 40 */
   --space-3xl: 3rem; /* 48 */
 
-  /* screen (media) */
-  --screen-tablet: 736;
-  --screen-desktop: 980;
-
   /* fonts */
   --fontFamily: 'Lexend Deca', sans-serif;
   --fontSize-sm: 0.75rem; /* 12 */

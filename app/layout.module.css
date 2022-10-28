@@ -1,0 +1,5 @@
+.main {
+  max-width: var(--centered-size);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}

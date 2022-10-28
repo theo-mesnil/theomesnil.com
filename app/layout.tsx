@@ -4,6 +4,7 @@ import Analytics from './components/Analytics'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Icon from './components/Icon'
+import styles from './layout.module.css'
 
 import './styles/reset.css'
 import './styles/theme.css'
@@ -20,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Header />
-        <main>
+        <main className={styles.main}>
           <Icon name="twitter" />
           {children}
         </main>

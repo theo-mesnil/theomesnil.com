@@ -4,7 +4,7 @@
   justify-content: space-between;
   max-width: var(--centered-size);
   margin: 0 auto;
-  padding: var(--space-xxl) var(--space-md) var(--space-md);
+  padding: var(--space-md);
 }
 
 .title {
@@ -14,6 +14,16 @@
 
 .nav {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: var(--space-3xl);
+  grid-template-columns: repeat(4, auto);
+  gap: var(--space-md);
+}
+
+@media (min-width: 736px) {
+  .header {
+    padding: var(--space-xxl) var(--space-md) var(--space-md);
+  }
+
+  .nav {
+    gap: var(--space-3xl);
+  }
 }
