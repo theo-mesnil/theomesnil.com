@@ -1,0 +1,10 @@
+body {
+  background-color: var(--color-light-900);
+  color: var(--color-dark-700);
+  font-weight: 400;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-light-900);
+}

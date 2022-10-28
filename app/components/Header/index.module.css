@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  max-width: var(--centered-size);
+  margin: 0 auto;
+  padding: var(--space-xxl) var(--space-md) var(--space-md);
+}
+
+.title {
+  color: var(--color-dark-900);
+  font-weight: 600;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: var(--space-3xl);
+}
