@@ -1,7 +1,11 @@
+html {
+  font-family: var(--fontFamily);
+  font-weight: var(--fontWeight-regular);
+}
+
 body {
   background-color: var(--color-light-900);
   color: var(--color-dark-700);
-  font-weight: 400;
 }
 
 ::selection {
