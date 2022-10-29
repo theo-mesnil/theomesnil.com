@@ -14,7 +14,7 @@ const lexendDeca = Lexend_Deca()
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en" className={lexendDeca.className} data-theme="dark">
       <head>
         <title>Théo Mesnil</title>
         <meta name="viewport" content="width=device-width" />
