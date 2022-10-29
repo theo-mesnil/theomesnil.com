@@ -1,0 +1,48 @@
+/* Titles */
+.h1,
+.h2,
+.h3 {
+  color: var(--color-dark-900);
+  font-weight: var(--fontWeight-bold);
+}
+
+.h1 {
+  font-size: var(--fontSize-xxl);
+}
+
+.h2 {
+  font-size: var(--fontSize-xl);
+}
+
+.h3 {
+  font-size: var(--fontSize-lg);
+}
+
+/* Texts */
+.lg,
+.sm,
+.md {
+  font-weight: var(--fontWeight-regular);
+}
+
+.lg {
+  font-size: var(--fontSize-lg);
+}
+
+.md {
+  font-size: var(--fontSize-md);
+}
+
+.sm {
+  font-size: var(--fontSize-sm);
+}
+
+.xs {
+  font-size: var(--fontSize-xs);
+}
+
+.section {
+  font-weight: var(--fontWeight-medium);
+  font-size: var(--fontSize-xs);
+  color: var(--color-primary);
+}

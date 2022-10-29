@@ -2,7 +2,7 @@ import localFont from '@next/font/local'
 
 const myFont = localFont({ src: './font.ttf' })
 
-import './module.css'
+import './index.css'
 
 interface IconProps {
   name:
@@ -18,8 +18,9 @@ interface IconProps {
     | 'sun'
     | 'twitch'
     | 'twitter'
+  className?: string
 }
 
-export default function Icon({ name }: IconProps) {
-  return <i className={`icon-${name} ${myFont.className}`} />
+export default function Icon({ name, className }: IconProps) {
+  return <i className={`icon-${name} ${myFont.className} ${className || ''}`} />
 }

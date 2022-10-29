@@ -3,7 +3,6 @@ import { Lexend_Deca } from '@next/font/google'
 import Analytics from './components/Analytics'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Icon from './components/Icon'
 import styles from './layout.module.css'
 
 import './styles/reset.css'
@@ -21,10 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Header />
-        <main className={styles.main}>
-          <Icon name="twitter" />
-          {children}
-        </main>
+        <main className={styles.main}>{children}</main>
         <Footer />
         <Analytics />
       </body>

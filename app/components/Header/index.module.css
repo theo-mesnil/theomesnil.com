@@ -1,21 +1,99 @@
 .header {
-  display: flex;
   position: sticky;
+  top: 0;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: var(--centered-size);
   margin: 0 auto;
   padding: var(--space-md);
-}
-
-.title {
-  color: var(--color-dark-900);
-  font-weight: 600;
+  background-color: var(--color-light-900);
 }
 
 .nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
   gap: var(--space-md);
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: var(--fontWeight-bold);
+  font-size: var(--fontSize-md);
+  transition: color 300ms;
+}
+
+.menu li a::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  margin-top: 5px;
+  background-color: transparent;
+  bottom: auto;
+  top: 100%;
+  transition: 300ms;
+}
+
+.menu li:hover a::before {
+  left: 35%;
+  width: 30%;
+  background-color: var(--color-primary);
+}
+
+.menu li a[aria-current='true'] {
+  color: var(--color-dark-900);
+}
+
+.menu li a[aria-current='true']::before {
+  width: 100%;
+  left: 0;
+  background-color: var(--color-primary);
+}
+
+.theme {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  display: flex;
+  cursor: pointer;
+  color: var(--color-primary);
+  font-size: var(--fontSize-xl);
+  margin-left: var(--space-md);
+  transition: color 300ms;
+}
+
+.theme:hover {
+  color: var(--color-dark-900);
 }
 
 @media (min-width: 736px) {
@@ -23,7 +101,11 @@
     padding: var(--space-xxl) var(--space-md) var(--space-md);
   }
 
-  .nav {
+  .menu {
     gap: var(--space-3xl);
+  }
+
+  .theme {
+    margin-left: var(--space-3xl);
   }
 }

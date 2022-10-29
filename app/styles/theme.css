@@ -16,15 +16,15 @@
   --space-3xl: 3rem; /* 48 */
 
   /* fonts */
-  --fontFamily: 'Lexend Deca', sans-serif;
-  --fontSize-sm: 0.75rem; /* 12 */
-  --fontSize-md: 0.875rem; /* 14 */
+  --fontSize-xs: 0.75rem; /* 12 */
+  --fontSize-sm: 0.875rem; /* 14 */
+  --fontSize-md: 1rem; /* 16 */
   --fontSize-lg: 1.125rem; /* 18 */
-  --fontSize-md: 1.25rem; /* 20 */
-  --fontSize-md: 2rem; /* 32 */
-  --fontWeight-regular: 300;
-  --fontWeight-medium: 500;
-  --fontWeight-bold: 700;
+  --fontSize-xl: 1.25rem; /* 20 */
+  --fontSize-xxl: 2rem; /* 32 */
+  --fontWeight-regular: 200;
+  --fontWeight-medium: 300;
+  --fontWeight-bold: 500;
 
   /* others */
   --centered-size: 62.5rem; /* 1000 */
