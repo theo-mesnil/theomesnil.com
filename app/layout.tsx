@@ -1,3 +1,4 @@
+'use client'
 import { Lexend_Deca } from '@next/font/google'
 
 import Analytics from './components/Analytics'

@@ -1,8 +1,8 @@
-import Icon from '../Icon'
 import Text from '../Text'
 
 import styles from './index.module.css'
 import NavigationItem from './NavigationItem'
+import ThemeSelector from './ThemeSelector'
 
 const menu = [
   {
@@ -25,9 +25,7 @@ export default function Header() {
             </NavigationItem>
           ))}
         </ul>
-        <button className={styles.theme}>
-          <Icon name="sun" />
-        </button>
+        <ThemeSelector />
       </nav>
     </header>
   )
