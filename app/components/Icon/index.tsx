@@ -4,7 +4,7 @@ const myFont = localFont({ src: './font.ttf' })
 
 import './index.css'
 
-interface IconProps {
+export interface IconProps {
   name:
     | 'typescript'
     | 'css'

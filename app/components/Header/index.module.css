@@ -11,16 +11,11 @@
   transition: background-color 200ms;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-}
-
+.nav,
 .menu {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
+  display: flex;
+  column-gap: var(--space-md);
   align-items: center;
-  gap: var(--space-md);
 }
 
 .menu li {
@@ -89,7 +84,6 @@
   height: var(--fontSize-xl);
   color: var(--color-primary);
   font-size: var(--fontSize-xl);
-  margin-left: var(--space-md);
   transition: color 300ms;
 }
 
@@ -115,11 +109,8 @@ html[data-theme='dark'] .moon {
     padding: var(--space-xxl) var(--space-md) var(--space-md);
   }
 
+  .nav,
   .menu {
-    gap: var(--space-3xl);
-  }
-
-  .theme {
-    margin-left: var(--space-3xl);
+    column-gap: var(--space-3xl);
   }
 }
