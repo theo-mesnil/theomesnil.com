@@ -1,0 +1,20 @@
+.heading {
+  max-width: 35rem;
+}
+
+.title {
+  margin-bottom: var(--space-md);
+}
+
+.subtitle {
+  line-height: 1.6;
+}
+
+.subtitle a {
+  color: inherit;
+  transition: color 100ms;
+}
+
+.subtitle a:hover {
+  color: var(--color-dark-900);
+}

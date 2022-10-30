@@ -1,0 +1,9 @@
+.projectsSection {
+  margin-top: var(--space-3xl);
+}
+
+@media (min-width: 736px) {
+  .projectsSection {
+    margin-top: 8rem;
+  }
+}

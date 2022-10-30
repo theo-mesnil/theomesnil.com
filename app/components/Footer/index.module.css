@@ -5,10 +5,6 @@
   margin-bottom: var(--space-3xl);
 }
 
-.title {
-  margin-bottom: var(--space-xl);
-}
-
 .aboutLink {
   margin-bottom: var(--space-lg);
 }
@@ -37,7 +33,7 @@
   color: var(--color-dark-700);
   font-size: var(--fontSize-xs);
   font-weight: var(--fontWeight-medium);
-  transition: color 300ms;
+  transition: color 200ms;
   position: relative;
 }
 

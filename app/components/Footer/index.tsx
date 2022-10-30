@@ -26,9 +26,7 @@ const socials: Social[] = [
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <Text variant="section" className={styles.title}>
-        Follow me
-      </Text>
+      <Text variant="section">Follow me</Text>
       <ArrowLink href="/about" isNextLink className={styles.aboutLink}>
         Learn more about me
       </ArrowLink>

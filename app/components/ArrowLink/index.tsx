@@ -19,7 +19,6 @@ export default function ArrowLink({
   isNextLink,
   className,
 }: ArrowLinkProps) {
-  console.log(className)
   const Tag = isNextLink ? Link : 'a'
 
   return (

@@ -45,4 +45,5 @@
   font-weight: var(--fontWeight-medium);
   font-size: var(--fontSize-xs);
   color: var(--color-primary);
+  margin-bottom: var(--space-xl);
 }
