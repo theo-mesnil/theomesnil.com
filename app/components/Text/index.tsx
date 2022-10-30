@@ -4,6 +4,7 @@ interface TextProps {
   variant?: 'h1' | 'h2' | 'h3' | 'xs' | 'sm' | 'md' | 'lg' | 'section'
   children: React.ReactNode
   as?: keyof HTMLElementTagNameMap
+  className?: string
 }
 
 const tagByVariant = {
@@ -17,8 +18,8 @@ const tagByVariant = {
   section: 'h4',
 }
 
-export default function Text({ as, variant = 'md', children }: TextProps) {
+export default function Text({ as, variant = 'md', children, className }: TextProps) {
   const CustomTag = `${as || tagByVariant[variant]}` as keyof JSX.IntrinsicElements
 
-  return <CustomTag className={styles[variant]}>{children}</CustomTag>
+  return <CustomTag className={`${styles[variant]} ${className || ''}`}>{children}</CustomTag>
 }

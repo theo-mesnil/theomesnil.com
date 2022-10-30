@@ -1,0 +1,27 @@
+.link {
+  color: var(--color-dark-900);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.md {
+  font-size: var(--fontSize-lg);
+  font-weight: var(--fontWeight-bold);
+}
+
+.sm {
+  font-size: var(--fontSize-sm);
+  font-weight: var(--fontWeight-medium);
+}
+
+.icon {
+  font-size: 130%;
+  color: var(--color-primary);
+  margin-left: var(--space-xs);
+  transition: transform 300ms;
+}
+
+.link:hover .icon {
+  transform: translateX(6px);
+}

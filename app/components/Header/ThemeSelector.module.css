@@ -1,0 +1,48 @@
+.theme {
+  /* reset button */
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* button style */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: var(--fontSize-xl);
+  height: var(--fontSize-xl);
+  color: var(--color-primary);
+  font-size: var(--fontSize-md);
+  transition: color 300ms;
+}
+
+.theme:hover {
+  color: var(--color-dark-900);
+}
+
+.sun,
+.moon {
+  position: absolute;
+  transform: scale(1);
+  transition: transform 500ms ease-in-out;
+}
+
+html[data-theme='light'] .sun,
+html[data-theme='dark'] .moon {
+  transform: scale(0);
+  opacity: 0;
+}
+
+@media (min-width: 736px) {
+  .theme {
+    font-size: var(--fontSize-xl);
+  }
+}

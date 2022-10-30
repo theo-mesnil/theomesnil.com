@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 import Icon from '../Icon'
 
-import styles from './index.module.css'
+import styles from './ThemeSelector.module.css'
 
 export default function ThemeSelector() {
   function handleChangeTheme() {
@@ -26,7 +26,7 @@ export default function ThemeSelector() {
   }, [])
 
   return (
-    <button className={styles.theme} onClick={handleChangeTheme}>
+    <button aria-label={`theme selector`} className={styles.theme} onClick={handleChangeTheme}>
       <Icon name="sun" className={styles.sun} />
       <Icon name="moon" className={styles.moon} />
     </button>

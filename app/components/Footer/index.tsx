@@ -1,3 +1,4 @@
+import ArrowLink from '../ArrowLink'
 import Icon, { IconProps } from '../Icon'
 import Text from '../Text'
 
@@ -25,7 +26,12 @@ const socials: Social[] = [
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <Text variant="section">Follow me</Text>
+      <Text variant="section" className={styles.title}>
+        Follow me
+      </Text>
+      <ArrowLink href="/about" isNextLink className={styles.aboutLink}>
+        Learn more about me
+      </ArrowLink>
       <ul className={styles.socials}>
         {socials.map(({ name, url }) => (
           <li key={`footer_social_${name}`}>

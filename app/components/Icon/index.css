@@ -11,6 +11,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-forward:before {
+  content: '\e90c';
+}
 .icon-typescript:before {
   content: '\e900';
 }

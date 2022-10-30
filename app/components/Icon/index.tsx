@@ -6,6 +6,7 @@ import './index.css'
 
 export interface IconProps {
   name:
+    | 'arrow-forward'
     | 'typescript'
     | 'css'
     | 'react'
