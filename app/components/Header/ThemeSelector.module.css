@@ -24,7 +24,8 @@
   transition: color 300ms;
 }
 
-.theme:hover {
+.theme:hover,
+.theme:focus-visible {
   color: var(--color-dark-900);
 }
 

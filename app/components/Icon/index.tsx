@@ -7,18 +7,20 @@ import './index.css'
 export interface IconProps {
   name:
     | 'arrow-forward'
-    | 'typescript'
     | 'css'
-    | 'react'
-    | 'figma'
-    | 'javascript'
     | 'dribbble'
+    | 'figma'
     | 'github'
+    | 'javascript'
     | 'linkedin'
+    | 'mic'
     | 'moon'
+    | 'react'
+    | 'star'
     | 'sun'
     | 'twitch'
     | 'twitter'
+    | 'typescript'
   className?: string
 }
 
