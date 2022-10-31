@@ -14,13 +14,15 @@ const projects = [
     image: welcomeUiImage,
     description:
       'Customizable design system library made with react, typescript, styled-components and reakit',
+    stars: '+450',
   },
   {
     name: 'WatchToWatch',
-    github: 'theo-mesnil/WatchToWatch',
+    github: 'theo-mesnil/WhatToWatch',
     image: whatToWatchImage,
     description:
       'WhatToWatch is the simplest and fastest way to discover movies, series and actors',
+    stars: '8',
   },
   {
     name: 'theomesnil.com',
@@ -28,6 +30,7 @@ const projects = [
     image: theomesnilImage,
     description: 'This website is open source, you can check the code source on github :)',
     withBorder: true,
+    stars: '1',
   },
 ]
 
