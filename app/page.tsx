@@ -17,7 +17,7 @@ const projects = [
     stars: '+450',
   },
   {
-    name: 'WatchToWatch',
+    name: 'WhatToWatch',
     github: 'theo-mesnil/WhatToWatch',
     image: whatToWatchImage,
     description:
