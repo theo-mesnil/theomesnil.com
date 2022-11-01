@@ -1,9 +1,8 @@
 import Image, { ImageProps } from 'next/image'
 
-import Icon from '../Icon'
-import Text from '../Text'
-
-import styles from './index.module.css'
+import Icon from './components/Icon'
+import Text from './components/Text'
+import styles from './Project.module.css'
 
 interface ProjectProps {
   name: string
@@ -18,7 +17,7 @@ export default function Project({ name, image, description, github, stars }: Pro
     <a
       href={`https://www.github.com/${github}`}
       target="_blank"
-      rel="noreferrer"
+      rel="noreferrer noopener"
       className={styles.project}
     >
       <article>

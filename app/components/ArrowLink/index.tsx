@@ -5,30 +5,54 @@ import Icon from '../Icon'
 import styles from './index.module.css'
 
 interface ArrowLinkProps {
-  variant?: 'md' | 'sm'
   children: React.ReactNode
-  href: string
-  isNextLink?: boolean
   className?: string
+  href?: string
+  isNextLink?: boolean
+  variant?: 'md' | 'sm'
+}
+
+interface ArrowLinkChildrenProps {
+  children: React.ReactNode
+}
+
+function ArrowLinkContent({ children }: ArrowLinkChildrenProps) {
+  return (
+    <>
+      {children}
+      <Icon name="arrow-forward" className={styles.icon} />
+    </>
+  )
 }
 
 export default function ArrowLink({
-  variant = 'md',
   children,
+  className,
   href,
   isNextLink,
-  className,
+  variant = 'md',
 }: ArrowLinkProps) {
-  const Tag = isNextLink ? Link : 'a'
+  const classNames = `${styles.link} ${styles[variant]} ${className || ''}`
 
-  return (
-    <Tag
-      href={href}
-      target={!isNextLink ? '_blank' : undefined}
-      className={`${styles.link} ${styles[variant]} ${className || ''}`}
-    >
-      {children}
-      <Icon name="arrow-forward" className={styles.icon} />
-    </Tag>
-  )
+  if (!href) {
+    return (
+      <span className={classNames}>
+        <ArrowLinkContent>{children}</ArrowLinkContent>
+      </span>
+    )
+  } else {
+    if (isNextLink) {
+      return (
+        <Link href={href} className={classNames}>
+          <ArrowLinkContent>{children}</ArrowLinkContent>
+        </Link>
+      )
+    }
+
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={classNames}>
+        <ArrowLinkContent>{children}</ArrowLinkContent>
+      </a>
+    )
+  }
 }

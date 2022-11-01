@@ -3,9 +3,9 @@ import welcomeUiImage from '../public/projects/welcome-ui.png'
 import whatToWatchImage from '../public/projects/what-to-watch.png'
 
 import Heading from './components/Heading'
-import Project from './components/Project'
 import Text from './components/Text'
 import styles from './page.module.css'
+import Project from './Project'
 
 const projects = [
   {
