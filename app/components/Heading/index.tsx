@@ -3,8 +3,8 @@ import Text from '../Text'
 import styles from './index.module.css'
 
 interface HeadingProps {
-  title: React.ReactNode
   children?: React.ReactNode
+  title: React.ReactNode
 }
 
 export default function Heading({ title, children }: HeadingProps) {

@@ -5,14 +5,14 @@ import Text from './components/Text'
 import styles from './Project.module.css'
 
 interface ProjectProps {
-  name: string
-  image: ImageProps['src']
   description: string
   github: string
+  image: ImageProps['src']
+  name: string
   stars: string
 }
 
-export default function Project({ name, image, description, github, stars }: ProjectProps) {
+export default function Project({ description, github, image, name, stars }: ProjectProps) {
   return (
     <a
       href={`https://www.github.com/${github}`}

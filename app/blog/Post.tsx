@@ -10,22 +10,22 @@ interface PostProps {
   date: string
   description: string
   image: ImageProps['src']
+  isFrench?: boolean
   isPodcast?: boolean
   name: string
   time: string
   url: string
-  isFrench?: boolean
 }
 
 export default function Post({
-  image,
-  name,
   date,
-  time,
-  isPodcast,
-  url,
   description,
+  image,
   isFrench,
+  isPodcast,
+  name,
+  time,
+  url,
 }: PostProps) {
   return (
     <a href={url} target="_blank" rel="noreferrer noopener" className={styles.post}>

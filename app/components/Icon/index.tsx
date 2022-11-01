@@ -5,6 +5,7 @@ const myFont = localFont({ src: './font.ttf' })
 import './index.css'
 
 export interface IconProps {
+  className?: string
   name:
     | 'arrow-forward'
     | 'css'
@@ -21,7 +22,6 @@ export interface IconProps {
     | 'twitch'
     | 'twitter'
     | 'typescript'
-  className?: string
 }
 
 export default function Icon({ name, className }: IconProps) {

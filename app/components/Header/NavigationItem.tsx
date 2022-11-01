@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 interface NavigationItemProps {
-  path: string
   children: string
+  path: string
 }
 
 export default function NavigationItem({ path, children }: NavigationItemProps) {
