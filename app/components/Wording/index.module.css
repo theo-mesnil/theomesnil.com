@@ -1,0 +1,13 @@
+.wording {
+  max-width: 35rem;
+  line-height: 1.6;
+}
+
+.wording a {
+  color: inherit;
+  transition: color 100ms;
+}
+
+.wording a:hover {
+  color: var(--color-dark-900);
+}

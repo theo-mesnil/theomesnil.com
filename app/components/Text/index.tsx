@@ -1,10 +1,10 @@
 import styles from './index.module.css'
 
 interface TextProps {
-  variant?: 'h1' | 'h2' | 'h3' | 'xs' | 'sm' | 'md' | 'lg' | 'section'
-  children: React.ReactNode
   as?: keyof HTMLElementTagNameMap
+  children: React.ReactNode
   className?: string
+  variant?: 'h1' | 'h2' | 'h3' | 'xs' | 'sm' | 'md' | 'lg' | 'section'
 }
 
 const tagByVariant = {

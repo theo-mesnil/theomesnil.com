@@ -1,0 +1,19 @@
+.subtitle {
+  text-transform: capitalize;
+}
+
+.subJobs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-left: var(--space-md);
+  padding-left: var(--space-sm);
+  border-left: 1px solid var(--color-primary);
+  margin-top: var(--space-md);
+}
+
+.subJobTitle {
+  color: var(--color-dark-900);
+  font-weight: var(--fontWeight-bold);
+  display: block;
+}

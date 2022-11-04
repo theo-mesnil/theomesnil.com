@@ -1,0 +1,53 @@
+.project {
+  color: inherit;
+  text-decoration: none;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-xs);
+}
+
+.description {
+  max-width: 21rem;
+  display: block;
+  margin-bottom: var(--space-lg);
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  margin-left: var(--space-sm);
+}
+
+.icon {
+  color: var(--color-primary);
+  font-size: 0.6875rem;
+  margin-left: var(--space-xs);
+}
+
+.image {
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  outline: 3px solid transparent;
+  outline-offset: 0px;
+  transition: outline 300ms, outline-offset 300ms;
+}
+
+.image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.project:focus-visible {
+  outline: none;
+}
+
+.project:hover .image,
+.project:focus-visible .image {
+  outline: 3px solid var(--color-primary);
+  outline-offset: var(--space-xs);
+}
