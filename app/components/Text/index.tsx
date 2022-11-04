@@ -15,7 +15,7 @@ const tagByVariant = {
   sm: 'span',
   md: 'span',
   lg: 'span',
-  section: 'h4',
+  section: 'div',
 }
 
 export default function Text({ as, variant = 'md', children, className }: TextProps) {
