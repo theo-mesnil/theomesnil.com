@@ -1,4 +1,3 @@
-'use client'
 import { Lexend_Deca } from '@next/font/google'
 
 import Analytics from './components/Analytics'
@@ -10,7 +9,7 @@ import './styles/reset.css'
 import './styles/theme.css'
 import './styles/global.css'
 
-const lexendDeca = Lexend_Deca()
+const lexendDeca = Lexend_Deca({ subsets: ['latin'] })
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
