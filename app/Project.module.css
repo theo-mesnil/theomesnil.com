@@ -23,8 +23,8 @@
 
 .icon {
   color: var(--color-primary);
-  font-size: 0.62rem;
-  margin-right: var(--space-xs);
+  font-size: 0.6875rem;
+  margin-left: var(--space-xs);
 }
 
 .image {

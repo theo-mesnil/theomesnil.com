@@ -1,5 +1,5 @@
 import ifttdImage from '../../public/posts/ifttd.jpg'
-import mediumWelcomeUIImage from '../../public/posts/medium-welcome-ui.jpeg'
+import mediumWelcomeUIImage from '../../public/posts/medium-welcome-ui.jpg'
 import Heading from '../components/Heading'
 
 import styles from './page.module.css'

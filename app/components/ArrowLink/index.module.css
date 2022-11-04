@@ -1,7 +1,7 @@
 .link {
   color: var(--color-dark-900);
   text-decoration: none;
-  display: inline-flex;
+  display: flex;
   align-items: center;
 }
 

@@ -24,7 +24,8 @@ export default function Project({ description, github, image, name, stars }: Pro
         <div className={styles.title}>
           <Text variant="h3">{name}</Text>
           <Text variant="xs" className={styles.stars}>
-            <Icon name="star" className={styles.icon} /> {stars}
+            {stars}
+            <Icon name="star" className={styles.icon} />
           </Text>
         </div>
         <Text variant="sm" className={styles.description}>

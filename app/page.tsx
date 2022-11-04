@@ -1,6 +1,6 @@
-import theomesnilImage from '../public/projects/theo-mesnil.png'
-import welcomeUiImage from '../public/projects/welcome-ui.png'
-import whatToWatchImage from '../public/projects/what-to-watch.png'
+import theomesnilImage from '../public/projects/theo-mesnil.jpg'
+import welcomeUiImage from '../public/projects/welcome-ui.jpg'
+import whatToWatchImage from '../public/projects/what-to-watch.jpg'
 
 import Heading from './components/Heading'
 import Text from './components/Text'
@@ -14,7 +14,7 @@ const projects = [
     image: welcomeUiImage,
     description:
       'Customizable design system library made with react, typescript, styled-components and reakit',
-    stars: '+450',
+    stars: '+480',
   },
   {
     name: 'WhatToWatch',
@@ -39,9 +39,8 @@ export default function Home() {
     <>
       <section>
         <Heading title="Senior front-end developer in Paris who likes interfaces 💅">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus semper aliquam
-          condimentum. Fusce eleifend, leo ac sollicitudin blandit, velit libero viverra nulla, vel
-          euismod sapien quam nec lectus.
+          I love to create interfaces and design system with React, typescript styled-components and
+          also app with React Native
         </Heading>
       </section>
       <section className={styles.projectsSection}>

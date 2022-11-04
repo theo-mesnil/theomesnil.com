@@ -1,4 +1,5 @@
 import Text from '../Text'
+import Wording from '../Wording'
 
 import styles from './index.module.css'
 
@@ -13,7 +14,7 @@ export default function Heading({ title, children }: HeadingProps) {
       <Text variant="h1" className={`${!!children ? styles.title : ''}`}>
         {title}
       </Text>
-      {children && <Text className={styles.subtitle}>{children}</Text>}
+      {children && <Wording>{children}</Wording>}
     </div>
   )
 }
