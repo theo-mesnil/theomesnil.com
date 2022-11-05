@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           property="og:image"
           content="https://repository-images.githubusercontent.com/558503992/a06e1611-e929-4af2-9e68-9234a58c14f3"
         />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@theomesnil" />
         <meta name="twitter:creator" content="@theomesnil" />
