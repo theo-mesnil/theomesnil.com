@@ -3,7 +3,7 @@ import { Lexend_Deca } from '@next/font/google'
 import Analytics from './components/Analytics'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import styles from './layout.module.css'
+import Main from './components/Main'
 
 import './styles/reset.css'
 import './styles/theme.css'
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Header />
-        <main className={styles.main}>{children}</main>
+        <Main>{children}</Main>
         <Footer />
         <Analytics />
       </body>
