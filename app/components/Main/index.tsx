@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
+import * as React from 'react'
 
 import styles from './index.module.css'
 
@@ -25,6 +26,10 @@ interface MainProps {
 
 export default function Main({ children }: MainProps) {
   const pathname = usePathname()
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
 
   return (
     <motion.main
