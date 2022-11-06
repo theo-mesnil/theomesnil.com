@@ -5,7 +5,7 @@
 .projects {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: var(--space-md);
+  gap: var(--space-xxl);
 }
 
 @media (min-width: 736px) {

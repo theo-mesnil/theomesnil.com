@@ -32,7 +32,13 @@ export default function Post({
       <article className={styles.article}>
         <div className={styles.infos}>
           <div className={styles.image}>
-            <Image placeholder="blur" src={image} alt={`${name} cover`} />
+            <Image
+              fill
+              style={{ objectFit: 'cover' }}
+              placeholder="blur"
+              src={image}
+              alt={`${name} cover`}
+            />
           </div>
           <div className={styles.metas}>
             <Text variant="sm" className={styles.meta}>
