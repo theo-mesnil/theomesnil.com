@@ -4,18 +4,14 @@
 }
 
 .image {
+  position: relative;
+  width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius);
   overflow: hidden;
   outline: 3px solid transparent;
   outline-offset: 0px;
   transition: outline 300ms, outline-offset 300ms;
-}
-
-.image img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 
 .description {

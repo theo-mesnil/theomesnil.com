@@ -32,7 +32,13 @@ export default function Project({ description, github, image, name, stars }: Pro
           {description}
         </Text>
         <div className={styles.image}>
-          <Image placeholder="blur" src={image} alt={`${name} cover`} />
+          <Image
+            style={{ objectFit: 'cover' }}
+            fill
+            placeholder="blur"
+            src={image}
+            alt={`${name} cover`}
+          />
         </div>
       </article>
     </a>
