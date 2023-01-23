@@ -12,7 +12,7 @@
   "dependencies": {
     "@next/font": "^13.0.6",
     "@vercel/analytics": "^0.1.6",
-    "framer-motion": "^7.7.2",
+    "framer-motion": "^8.5.2",
     "next": "13.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0"
