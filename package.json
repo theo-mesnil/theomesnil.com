@@ -10,7 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@next/font": "^13.0.6",
+    "@next/font": "^13.1.5",
     "@vercel/analytics": "^0.1.6",
     "framer-motion": "^7.7.2",
     "next": "13.0.6",
