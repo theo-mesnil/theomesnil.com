@@ -1,3 +1,4 @@
+import artisanDeveloppeurImage from '../../public/posts/artisan-developpeur.jpg'
 import ifttdImage from '../../public/posts/ifttd.jpg'
 import mediumWelcomeUIImage from '../../public/posts/medium-welcome-ui.jpg'
 import Heading from '../components/Heading'
@@ -6,6 +7,17 @@ import styles from './page.module.css'
 import Post from './Post'
 
 const posts = [
+  {
+    description:
+      'Comment et pourquoi créer un design system ? Quelles sont les sources de motivation des devs ? Pourquoi le rendre open source ? Peut-il vraiment être transposable sans difficulté ? Quels sont les défis de sa maintenance ? On en parle avec Théo et Mickaël de Welcome to the Jungle.',
+    date: '07.02.2023',
+    image: artisanDeveloppeurImage,
+    isPodcast: true,
+    isFrench: true,
+    name: 'Créer le Design System de Welcome to the Jungle',
+    time: '43min',
+    url: 'https://podcast.ausha.co/artisan-developpeur/cre-er-le-design-system-de-welcome-to-the-jungle-avec-the-o-et-mickae-l',
+  },
   {
     description:
       'Les D.E.V. de la semaine sont Théo Mesnil, Mickael Le Ralec, tous deux front-end développeur chez Welcome to the jungle. Ils viennent nous parler du design system open source qu’ils ont créé. De la même manière qu’il y a 10 ans Bootstrap permettait à des dev peu familier avec le front de créer des sites responsives facilement, Welcome UI permet aux devs front n’ayant pas encore de design system de partir d’une base solide et complète. Théo et Mickael nous racontent comment le projet s’est construit, où il en est et ce qui est prévu pour la suite. Nous discutons aussi de l’approche Open Source et des impacts positifs sur le recrutement et l’on-boarding.',
