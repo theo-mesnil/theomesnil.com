@@ -9,6 +9,7 @@
   padding: var(--space-md);
   background-color: var(--color-light-900);
   transition: background-color 200ms;
+  z-index: 1;
 }
 
 .nav,
