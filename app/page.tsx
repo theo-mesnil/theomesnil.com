@@ -14,7 +14,7 @@ const projects = [
     image: welcomeUiImage,
     description:
       'Customizable design system library made with react, typescript, styled-components and reakit',
-    stars: '+480',
+    stars: '+500',
   },
   {
     name: 'WhatToWatch',
@@ -30,7 +30,7 @@ const projects = [
     image: theomesnilImage,
     description: 'This website is open source, you can check the code source on github :)',
     withBorder: true,
-    stars: '1',
+    stars: '2',
   },
 ]
 
