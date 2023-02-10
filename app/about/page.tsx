@@ -88,13 +88,7 @@ export default function About() {
           styled-components.
         </Heading>
         <div className={styles.meImage}>
-          <Image
-            style={{ objectFit: 'cover' }}
-            fill
-            placeholder="blur"
-            src={meImage}
-            alt="Théo Mesnil"
-          />
+          <Image fill placeholder="blur" src={meImage} alt="Théo Mesnil" />
         </div>
       </section>
       <Text variant="xs" className={styles.pictureCopyright} as="div">
