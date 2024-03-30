@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import meImage from '../../public/about/me.jpg'
+import ArrowLink from '../components/ArrowLink'
 import Heading from '../components/Heading'
 import Icon from '../components/Icon'
 import Text from '../components/Text'
@@ -11,51 +12,79 @@ import styles from './page.module.css'
 
 const experiences = [
   {
-    title: 'Senior front-end developer',
     company: 'Welcome to the jungle',
-    startDate: '01/05/2019',
+    link: 'https://www.welcometothejungle.com',
+    startDate: '05/01/2019',
     subJobs: [
       {
-        title: 'Front-end developer',
-        startDate: '01/05/2019',
+        description: [
+          'Tech owner on mission team: lead epics and engage discussions with the PM and designer for all development team associates',
+          'Create with pride our design system welcome-ui.com and serve on the welcome-ui committee',
+          'Facilitate front chapter meetings',
+          'Contribute to continuous integration efforts and facilitate upgrades across common libraries',
+        ],
+        stack: ['ReactJS', 'Typescript', 'Styled component', 'NextJS', 'CircleCI', 'Figma'],
+        startDate: '01/01/2021',
+        title: 'Senior frontend developer',
+      },
+      {
+        title: 'Confirmed frontend developer',
+        startDate: '05/01/2019',
         endDate: '01/01/2021',
       },
     ],
+    title: 'Senior frontend developer',
   },
   {
-    title: 'Front-end developer',
     company: 'Leboncoin',
-    startDate: '01/08/2017',
-    endDate: '01/04/2019',
-  },
-  {
-    title: 'Front-end developer',
-    company: 'Canal+',
-    startDate: '01/04/2013',
-    endDate: '01/07/2017',
+    link: 'https://www.leboncoin.com',
     subJobs: [
       {
-        title: 'Interface & experience team (myCanal)',
+        description: [
+          'Transitioned a legacy app to a ReactJS platform on the deposit funnel, the ad page, and a holiday bookings funnel',
+          'Proof of concept for a design system',
+        ],
+        title: 'Frontend developer',
+        stack: ['ReactJS', 'Redux', 'Styled component', 'Sketch'],
+      },
+    ],
+    endDate: '04/01/2019',
+    startDate: '08/01/2017',
+  },
+  {
+    company: 'Canalplus',
+    endDate: '07/01/2017',
+    link: 'https://www.canalplus.com',
+    startDate: '04/01/2013',
+    subJobs: [
+      {
+        title: 'Frontend developer - Interfaces & Experiences',
         startDate: '01/01/2015',
-        endDate: '01/07/2017',
+        endDate: '07/01/2017',
+        description: [
+          'Migrated myCanal platform to ReactJS',
+          'Created C8 & CSTAR replay platform',
+          'Crafted websites for special TV operations',
+        ],
+        stack: ['ReactJS', 'Angular', 'SCSS'],
       },
       {
-        title: 'Designer & integrator (Canalplay)',
-        startDate: '01/10/2013',
-        endDate: '01/12/2014',
+        title: 'Web Developer & Designer at Canalplay',
+        startDate: '10/01/2013',
+        endDate: '12/01/2014',
       },
       {
-        title: 'Assistant project manager & integrator (Internship)',
-        startDate: '01/04/2013',
-        endDate: '01/09/2014',
+        title: 'Intership - Assistant Project Manager',
+        startDate: '04/01/2013',
+        endDate: '09/01/2014',
       },
     ],
   },
   {
-    title: 'Freelance Web developer and design',
-    company: 'Freelance',
-    startDate: '01/02/2010',
-    endDate: '01/12/2014',
+    company: 'Freelance - Web developer and design',
+    endDate: '12/01/2014',
+    link: 'https://github.com/theo-mesnil',
+    startDate: '02/01/2010',
   },
 ]
 
@@ -68,7 +97,7 @@ export default function About() {
             <>
               Hello, i’m Théo <span className={styles.emoji}>:)</span>
               <br />
-              I’m a front-end developer with over 8 years of experiences
+              I’m a front-end developer with over 10 years of experiences
             </>
           }
         >
@@ -84,8 +113,8 @@ export default function About() {
           <a href="https://www.canalplus.com/" target="_blank" rel="noopener noreferrer">
             Canalplus
           </a>
-          . I love to create interfaces and design system with React, typescript and
-          styled-components.
+          . I bring a deep passion for crafting engaging web interfaces and enhancing user
+          experiences with ReactJS and Typescript.
         </Heading>
         <div className={styles.meImage}>
           <Image fill placeholder="blur" src={meImage} alt="Théo Mesnil" />
@@ -101,8 +130,10 @@ export default function About() {
         Guadeloupe then last 3 years in Montréal. Then i moved to Paris to start my final study
         internship. I also love play games: Microsoft Flight simulator, Age of Empire...
       </Wording>
+      <ArrowLink className={styles.resume} href="theo-mesnil-resume.pdf" variant="sm">
+        Check my resume
+      </ArrowLink>
       <section className={styles.experiences}>
-        <Text variant="section">Experiences</Text>
         <div className={styles.logos}>
           <Icon name="javascript" />
           <Icon name="react" />
@@ -110,6 +141,7 @@ export default function About() {
           <Icon name="css" />
           <Icon name="figma" />
         </div>
+        <Text variant="section">Experiences</Text>
         <div className={styles.jobs}>
           {experiences.map(experience => (
             <Experience {...experience} key={`experience_${experience.company}`} />

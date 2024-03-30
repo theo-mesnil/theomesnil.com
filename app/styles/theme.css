@@ -4,6 +4,7 @@
   --color-primary: #ee4b6a;
   --color-dark-900: rgba(0, 10, 14, 1);
   --color-dark-700: rgba(0, 10, 14, 0.7);
+  --color-dark-50: rgba(0, 10, 14, 0.05);
   --color-light-900: rgba(255, 255, 255, 1);
   --color-light-700: rgba(255, 255, 255, 0.7);
 
@@ -24,9 +25,9 @@
   --fontSize-xl: 1.25rem; /* 20 */
   --fontSize-xxl: 1.75rem; /* 28 */
   --fontSize-3xl: 2rem; /* 32 */
-  --fontWeight-regular: 300;
-  --fontWeight-medium: 500;
-  --fontWeight-bold: 700;
+  --fontWeight-regular: 100;
+  --fontWeight-medium: 300;
+  --fontWeight-bold: 500;
 
   /* others */
   --centered-size: 55rem; /* 1000 */
@@ -37,6 +38,7 @@
 html[data-theme='dark'] {
   --color-dark-900: rgba(255, 255, 255, 1);
   --color-dark-700: rgba(255, 255, 255, 0.7);
+  --color-dark-50: rgba(255, 255, 255, 0.05);
   --color-light-900: rgba(0, 10, 14, 1);
   --color-light-700: rgba(0, 10, 14, 0.7);
 }

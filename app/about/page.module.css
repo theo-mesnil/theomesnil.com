@@ -39,3 +39,7 @@
 .experiences {
   margin-top: var(--space-3xl);
 }
+
+.resume {
+  margin-top: var(--space-lg);
+}

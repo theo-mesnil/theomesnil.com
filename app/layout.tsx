@@ -23,7 +23,7 @@ const robotoFont = Roboto({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={robotoFont.className} data-theme="dark">
+    <html lang="en" className={robotoFont.className} data-theme="light">
       <head>
         <title>Théo Mesnil _ Senior front-end developer in Paris</title>
         <meta
