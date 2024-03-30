@@ -1,4 +1,4 @@
-import { Lexend_Deca } from '@next/font/google'
+import { Lexend_Deca } from 'next/font/google'
 
 import Analytics from './components/Analytics'
 import Footer from './components/Footer'
