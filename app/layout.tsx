@@ -1,4 +1,4 @@
-import { Lexend_Deca } from 'next/font/google'
+import { Viga, Roboto } from 'next/font/google'
 
 import Analytics from './components/Analytics'
 import Footer from './components/Footer'
@@ -9,11 +9,21 @@ import './styles/reset.css'
 import './styles/theme.css'
 import './styles/global.css'
 
-const lexendDeca = Lexend_Deca({ subsets: ['latin'] })
+export const vigaFont = Viga({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+const robotoFont = Roboto({
+  weight: ['300', '500', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={lexendDeca.className} data-theme="dark">
+    <html lang="en" className={robotoFont.className} data-theme="dark">
       <head>
         <title>Théo Mesnil _ Senior front-end developer in Paris</title>
         <meta

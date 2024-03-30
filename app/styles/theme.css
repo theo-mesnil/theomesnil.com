@@ -24,9 +24,9 @@
   --fontSize-xl: 1.25rem; /* 20 */
   --fontSize-xxl: 1.75rem; /* 28 */
   --fontSize-3xl: 2rem; /* 32 */
-  --fontWeight-regular: 200;
-  --fontWeight-medium: 300;
-  --fontWeight-bold: 500;
+  --fontWeight-regular: 300;
+  --fontWeight-medium: 500;
+  --fontWeight-bold: 700;
 
   /* others */
   --centered-size: 55rem; /* 1000 */
