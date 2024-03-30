@@ -36,7 +36,9 @@
   overflow: hidden;
   outline: 3px solid transparent;
   outline-offset: 0px;
-  transition: outline 300ms, outline-offset 300ms;
+  transition:
+    outline 300ms,
+    outline-offset 300ms;
 }
 
 .project:focus-visible {

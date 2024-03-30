@@ -2,6 +2,8 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
+import { vigaFont } from '../../layout'
+
 interface NavigationItemProps {
   children: string
   path: string
@@ -12,7 +14,7 @@ export default function NavigationItem({ path, children }: NavigationItemProps) 
 
   return (
     <li>
-      <Link href={path} aria-current={pathname === path}>
+      <Link href={path} aria-current={pathname === path} className={vigaFont.className}>
         {children}
       </Link>
     </li>
