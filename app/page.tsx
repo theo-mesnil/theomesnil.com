@@ -14,7 +14,7 @@ const projects = [
     image: welcomeUiImage,
     description:
       'Customizable design system library made with react, typescript, styled-components and reakit',
-    stars: '+500',
+    stars: '~600',
   },
   {
     name: 'WhatToWatch',
@@ -22,7 +22,7 @@ const projects = [
     image: whatToWatchImage,
     description:
       'WhatToWatch is the simplest and fastest way to discover movies, series and actors',
-    stars: '8',
+    stars: '~20',
   },
   {
     name: 'theomesnil.com',
@@ -30,7 +30,7 @@ const projects = [
     image: theomesnilImage,
     description: 'This website is open source, you can check the code source on github :)',
     withBorder: true,
-    stars: '2',
+    stars: '3',
   },
 ]
 
@@ -39,8 +39,11 @@ export default function Home() {
     <>
       <section>
         <Heading title="Senior front-end developer in Paris who likes interfaces 💅">
-          I love to create interfaces and design system with React, typescript styled-components and
-          also app with React Native
+          With a decade of experience as a frontend developer, I bring a deep passion for crafting
+          engaging web interfaces and enhancing user experiences with ReactJS and Typescript. I take
+          pride in my contributions to projects such as MyCanal, the migration of Leboncoin and the
+          design system for Welcome to the Jungle. I enjoy contributing to both product and
+          technical decisions and actively participating in shaping future developments.
         </Heading>
       </section>
       <section className={styles.projectsSection}>

@@ -5,15 +5,46 @@
 .subJobs {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-lg);
   margin-left: var(--space-md);
-  padding-left: var(--space-sm);
-  border-left: 1px solid var(--color-primary);
   margin-top: var(--space-md);
+}
+
+.subJob {
+  border-left: 1px solid var(--color-primary);
+  padding-left: var(--space-lg);
+  max-width: 500px;
 }
 
 .subJobTitle {
   color: var(--color-dark-900);
   font-weight: var(--fontWeight-bold);
+  margin-bottom: 2px;
   display: block;
+}
+
+.subJobDescription {
+  font-size: var(--fontSize-sm);
+  margin-left: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.subJobDescriptionItem {
+  list-style: disc;
+  margin-top: var(--space-xs);
+}
+
+.stacks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.stacksItem {
+  font-size: var(--fontSize-sm);
+  color: var(--color-dark-900);
+  background-color: var(--color-dark-50);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 100px;
 }

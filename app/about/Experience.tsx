@@ -3,15 +3,34 @@ import Text from '../components/Text'
 
 import styles from './Experience.module.css'
 
+function yearsAndMonthsBetweenDates(startDate: string, endDate?: string) {
+  const start = new Date(startDate)
+  const end = endDate ? new Date(endDate) : new Date()
+
+  const monthsBetweenDates =
+    (end.getFullYear() - start.getFullYear()) * 12 - start.getMonth() + end.getMonth()
+
+  if (monthsBetweenDates < 12) return `${monthsBetweenDates}m`
+
+  const years = Math.floor(monthsBetweenDates / 12)
+  const months = monthsBetweenDates - years * 12
+
+  if (months === 0) return `${years}y`
+
+  return `${years}y ${months + 1}m`
+}
+
 interface ExperienceProps {
-  title: string
-  startDate: string
-  endDate?: string
   company: string
+  endDate?: string
+  link: string
+  startDate: string
   subJobs?: {
+    description?: string[]
+    stack?: string[]
+    endDate?: string
+    startDate?: string
     title: string
-    startDate: string
-    endDate: string
   }[]
 }
 
@@ -23,29 +42,58 @@ function getDateFormatted(date: string) {
 
 export default function Experience({
   subJobs,
-  title,
   startDate,
   endDate,
   company,
+  link,
 }: ExperienceProps) {
   return (
     <article>
       <div>
-        <ArrowLink>{title}</ArrowLink>
+        <ArrowLink href={link}>{company}</ArrowLink>
         <Text variant="xs" as="div" className={styles.subtitle}>
-          {company} - {getDateFormatted(startDate)} / {endDate ? getDateFormatted(endDate) : 'Now'}
+          {getDateFormatted(startDate)} / {endDate ? getDateFormatted(endDate) : 'Now'}
+          {` (${yearsAndMonthsBetweenDates(startDate, endDate)})`}
         </Text>
       </div>
       {!!subJobs && (
         <div className={styles.subJobs}>
           {subJobs.map(subJob => (
-            <div key={`experience_${title}_subJob_${subJob.title}`}>
+            <div className={styles.subJob} key={`experience_${company}_subJob_${subJob.title}`}>
               <Text className={styles.subJobTitle} as="div">
                 {subJob.title}
               </Text>
-              <Text variant="xs" as="div">
-                {getDateFormatted(subJob.startDate)} / {getDateFormatted(subJob.endDate)}
-              </Text>
+              {subJob.startDate && (
+                <Text variant="xs" as="div">
+                  {getDateFormatted(subJob.startDate)} /{' '}
+                  {subJob.endDate ? getDateFormatted(subJob.endDate) : 'Now'}
+                  {` (${yearsAndMonthsBetweenDates(subJob.startDate, subJob.endDate)})`}
+                </Text>
+              )}
+              {subJob.description && (
+                <ul className={styles.subJobDescription}>
+                  {subJob.description?.map((description, index) => (
+                    <li
+                      className={styles.subJobDescriptionItem}
+                      key={`experience_${company}_subJob_${subJob.title}_${index}`}
+                    >
+                      {description}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {subJob.stack && (
+                <div className={styles.stacks}>
+                  {subJob.stack?.map((stack, index) => (
+                    <span
+                      className={styles.stacksItem}
+                      key={`experience_${company}_subJob_${subJob.title}__stack_${index}`}
+                    >
+                      {stack}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
