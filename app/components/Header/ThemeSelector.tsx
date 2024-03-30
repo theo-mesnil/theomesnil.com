@@ -7,7 +7,7 @@ import styles from './ThemeSelector.module.css'
 
 export default function ThemeSelector() {
   function handleChangeTheme() {
-    const theme = localStorage.getItem('theme') || 'dark'
+    const theme = localStorage.getItem('theme') || 'light'
 
     if (theme === 'dark') {
       localStorage.setItem('theme', 'light')
