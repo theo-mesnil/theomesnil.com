@@ -13,7 +13,7 @@ const projects = [
     github: 'WTTJ/welcome-ui',
     image: welcomeUiImage,
     description:
-      'Customizable design system library made with react, typescript, styled-components and reakit',
+      'Customizable design system library made with react, typescript, styled-components and reakit.',
     stars: '~600',
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     github: 'theo-mesnil/WhatToWatch',
     image: whatToWatchImage,
     description:
-      'WhatToWatch is the simplest and fastest way to discover movies, series and actors',
+      'WhatToWatch is the simplest and fastest way to discover movies, series, and where to watch them.',
     stars: '~20',
   },
   {
