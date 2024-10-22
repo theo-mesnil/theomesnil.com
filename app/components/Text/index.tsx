@@ -1,4 +1,4 @@
-import { vigaFont } from '../../layout'
+import { vigaFont } from '../Fonts'
 
 import styles from './index.module.css'
 
@@ -26,9 +26,7 @@ export default function Text({ as, variant = 'md', children, className }: TextPr
 
   return (
     <CustomTag
-      className={`${styles[variant]} ${className || ''} ${
-        isHeading ? vigaFont.className : undefined
-      }`}
+      className={`${styles[variant]} ${className || ''} ${isHeading ? vigaFont.className : undefined}`}
     >
       {children}
     </CustomTag>
