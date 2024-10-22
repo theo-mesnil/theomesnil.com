@@ -1,29 +1,17 @@
-import { Viga, Roboto } from 'next/font/google'
+import { ThemeProvider } from 'next-themes'
 
 import Analytics from './components/Analytics'
+import { robotoFont } from './components/Fonts'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Main from './components/Main'
-
 import './styles/reset.css'
 import './styles/theme.css'
 import './styles/global.css'
 
-export const vigaFont = Viga({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-const robotoFont = Roboto({
-  weight: ['300', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-})
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={robotoFont.className} data-theme="light">
+    <html lang="en" className={robotoFont.className} suppressHydrationWarning>
       <head>
         <title>Théo Mesnil _ Senior front-end developer in Paris</title>
         <meta
@@ -48,10 +36,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="twitter:creator" content="@theomesnil" />
       </head>
       <body>
-        <Header />
-        <Main>{children}</Main>
-        <Footer />
-        <Analytics />
+        <ThemeProvider>
+          <Header />
+          <Main>{children}</Main>
+          <Footer />
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   )
