@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { vigaFont } from '../../layout'
+import { vigaFont } from '../Fonts'
 
 interface NavigationItemProps {
   children: string
