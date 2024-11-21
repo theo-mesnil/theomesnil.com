@@ -19,25 +19,19 @@
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
   margin-top: var(--space-3xl);
-  max-width: 37.5rem;
+  max-width: 21.875rem;
   border-radius: var(--radius);
   overflow: hidden;
 }
 
-.pictureCopyright {
-  margin-top: var(--space-xs);
-  margin-bottom: var(--space-xxl);
-}
-
-.pictureCopyright a {
-  color: inherit;
-  text-decoration: none;
-}
-
 .experiences {
   margin-top: var(--space-3xl);
+}
+
+.life {
+  margin-top: var(--space-lg);
 }
 
 .resume {
