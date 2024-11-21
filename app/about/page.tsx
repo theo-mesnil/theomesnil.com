@@ -120,12 +120,7 @@ export default function About() {
           <Image fill placeholder="blur" src={meImage} alt="Théo Mesnil" />
         </div>
       </section>
-      <Text variant="xs" className={styles.pictureCopyright} as="div">
-        <a href="https://www.instagram.com/thomdek/" target="_blank" rel="noopener noreferrer">
-          Picture by Thomas Decamps
-        </a>
-      </Text>
-      <Wording>
+      <Wording className={styles.life}>
         I lived all my childhood in Guadeloupe 🏝 I’ve studied at Supinfo, first 2 years in
         Guadeloupe then last 3 years in Montréal. Then i moved to Paris to start my final study
         internship. I also love play games: Microsoft Flight simulator, Age of Empire...
