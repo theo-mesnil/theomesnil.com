@@ -22,6 +22,7 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 5;
+  line-clamp: 5;
   -webkit-box-orient: vertical;
 }
 
@@ -42,6 +43,8 @@
 }
 
 .title {
+  display: flex;
+  align-items: center;
   margin-bottom: var(--space-xs);
 }
 
@@ -93,5 +96,6 @@
 
   .description {
     -webkit-line-clamp: 4;
+    line-clamp: 4;
   }
 }

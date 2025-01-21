@@ -1,6 +1,6 @@
 import Image, { ImageProps } from 'next/image'
+import { RiStarFill } from 'react-icons/ri'
 
-import Icon from './components/Icon'
 import Text from './components/Text'
 import styles from './Project.module.css'
 
@@ -25,7 +25,7 @@ export default function Project({ description, github, image, name, stars }: Pro
           <Text variant="h3">{name}</Text>
           <Text variant="xs" className={styles.stars}>
             {stars}
-            <Icon name="star" className={styles.icon} />
+            <RiStarFill className={styles.icon} />
           </Text>
         </div>
         <Text variant="sm" className={styles.description}>

@@ -1,6 +1,5 @@
 import Link from 'next/link'
-
-import Icon from '../Icon'
+import { RiArrowRightLine } from 'react-icons/ri'
 
 import styles from './index.module.css'
 
@@ -20,7 +19,7 @@ function ArrowLinkContent({ children }: ArrowLinkChildrenProps) {
   return (
     <>
       {children}
-      <Icon name="arrow-forward" className={styles.icon} />
+      <RiArrowRightLine className={styles.icon} />
     </>
   )
 }

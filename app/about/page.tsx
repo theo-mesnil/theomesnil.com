@@ -1,9 +1,9 @@
 import Image from 'next/image'
+import { SiCss3, SiTypescript, SiJavascript, SiFigma, SiReact } from 'react-icons/si'
 
 import meImage from '../../public/about/me.jpg'
 import ArrowLink from '../components/ArrowLink'
 import Heading from '../components/Heading'
-import Icon from '../components/Icon'
 import Text from '../components/Text'
 import Wording from '../components/Wording'
 
@@ -130,11 +130,11 @@ export default function About() {
       </ArrowLink>
       <section className={styles.experiences}>
         <div className={styles.logos}>
-          <Icon name="javascript" />
-          <Icon name="react" />
-          <Icon name="typescript" />
-          <Icon name="css" />
-          <Icon name="figma" />
+          <SiJavascript />
+          <SiReact />
+          <SiTypescript />
+          <SiCss3 />
+          <SiFigma />
         </div>
         <Text variant="section">Experiences</Text>
         <div className={styles.jobs}>
