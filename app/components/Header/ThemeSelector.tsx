@@ -1,7 +1,6 @@
 'use client'
 import { useTheme } from 'next-themes'
-
-import Icon from '../Icon'
+import { RiMoonClearFill, RiSunFill } from 'react-icons/ri'
 
 import styles from './ThemeSelector.module.css'
 
@@ -14,8 +13,8 @@ export default function ThemeSelector() {
       className={styles.theme}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
-      <Icon name="sun" className={styles.sun} />
-      <Icon name="moon" className={styles.moon} />
+      <RiSunFill className={styles.sun} />
+      <RiMoonClearFill className={styles.moon} />
     </button>
   )
 }

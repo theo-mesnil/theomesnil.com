@@ -1,7 +1,7 @@
 import Image, { ImageProps } from 'next/image'
+import { RiMicFill } from 'react-icons/ri'
 
 import ArrowLink from '../components/ArrowLink'
-import Icon from '../components/Icon'
 import Text from '../components/Text'
 
 import styles from './Post.module.css'
@@ -46,7 +46,7 @@ export default function Post({
         </div>
         <div>
           <Text variant="h2" className={styles.title}>
-            {isPodcast && <Icon className={styles.mic} name="mic" />}
+            {isPodcast && <RiMicFill className={styles.mic} />}
             {name}
           </Text>
           <Text variant="sm" className={styles.description}>
