@@ -15,24 +15,24 @@ interface ProjectProps {
 export default function Project({ description, github, image, name, stars }: ProjectProps) {
   return (
     <a
-      href={`https://www.github.com/${github}`}
-      target="_blank"
-      rel="noreferrer noopener"
       className={styles.project}
+      href={`https://www.github.com/${github}`}
+      rel="noreferrer noopener"
+      target="_blank"
     >
       <article>
         <div className={styles.title}>
           <Text variant="h3">{name}</Text>
-          <Text variant="xs" className={styles.stars}>
+          <Text className={styles.stars} variant="xs">
             {stars}
             <RiStarFill className={styles.icon} />
           </Text>
         </div>
-        <Text variant="sm" className={styles.description}>
+        <Text className={styles.description} variant="sm">
           {description}
         </Text>
         <div className={styles.image}>
-          <Image fill placeholder="blur" src={image} alt={`${name} cover`} />
+          <Image alt={`${name} cover`} fill placeholder="blur" src={image} />
         </div>
       </article>
     </a>

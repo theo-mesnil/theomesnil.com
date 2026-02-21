@@ -1,22 +1,22 @@
 'use client'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'motion/react'
 import { usePathname } from 'next/navigation'
 import * as React from 'react'
 
 import styles from './index.module.css'
 
-const variants = {
-  initial: {
-    opacity: 0,
-    y: 8,
-  },
+const variants: Variants = {
   enter: {
     opacity: 1,
-    y: 0,
     transition: {
       duration: 0.4,
       ease: [0.61, 1, 0.88, 1],
     },
+    y: 0,
+  },
+  initial: {
+    opacity: 0,
+    y: 8,
   },
 }
 
@@ -33,10 +33,10 @@ export default function Main({ children }: MainProps) {
 
   return (
     <motion.main
-      key={pathname}
+      animate="enter"
       className={styles.main}
       initial="initial"
-      animate="enter"
+      key={pathname}
       variants={variants}
     >
       {children}

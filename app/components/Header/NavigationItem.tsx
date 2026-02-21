@@ -9,12 +9,12 @@ interface NavigationItemProps {
   path: string
 }
 
-export default function NavigationItem({ path, children }: NavigationItemProps) {
+export default function NavigationItem({ children, path }: NavigationItemProps) {
   const pathname = usePathname()
 
   return (
     <li>
-      <Link href={path} aria-current={pathname === path} className={vigaFont.className}>
+      <Link aria-current={pathname === path} className={vigaFont.className} href={path}>
         {children}
       </Link>
     </li>

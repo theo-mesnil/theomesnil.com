@@ -3,7 +3,6 @@ import { SiBluesky, SiDribbble, SiGithub, SiLinkedin, SiTwitch } from 'react-ico
 
 import ArrowLink from '../ArrowLink'
 import Text from '../Text'
-
 import styles from './index.module.css'
 
 type Social = {
@@ -14,31 +13,31 @@ type Social = {
 
 const socials: Social[] = [
   {
-    name: 'Github',
     icon: SiGithub,
+    name: 'Github',
     url: 'https://github.com/theo-mesnil',
   },
   {
-    name: 'Bluesky',
     icon: SiBluesky,
+    name: 'Bluesky',
     url: 'https://bsky.app/profile/theomesnil.bsky.social',
   },
-  { name: 'Dribbble', icon: SiDribbble, url: 'https://dribbble.com/theomesnil' },
-  { name: 'Twitch', icon: SiTwitch, url: 'https://www.twitch.tv/theomtl' },
-  { name: 'Linkedin', icon: SiLinkedin, url: 'https://www.linkedin.com/in/theomesnil/' },
+  { icon: SiDribbble, name: 'Dribbble', url: 'https://dribbble.com/theomesnil' },
+  { icon: SiTwitch, name: 'Twitch', url: 'https://www.twitch.tv/theomtl' },
+  { icon: SiLinkedin, name: 'Linkedin', url: 'https://www.linkedin.com/in/theomesnil/' },
 ]
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <Text variant="section">Follow me</Text>
-      <ArrowLink href="/about" isNextLink className={styles.aboutLink}>
+      <ArrowLink className={styles.aboutLink} href="/about" isNextLink>
         Learn more about me
       </ArrowLink>
       <ul className={styles.socials}>
         {socials.map(({ icon: Icon, name, url }) => (
           <li key={`footer_social_${name}`}>
-            <a href={url} target="_blank" rel="noopener noreferrer" className={styles.social}>
+            <a className={styles.social} href={url} rel="noopener noreferrer" target="_blank">
               <Icon className={styles.socialIcon} />
               <span className={styles.socialName}>{name}</span>
             </a>
