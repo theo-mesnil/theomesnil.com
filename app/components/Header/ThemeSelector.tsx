@@ -5,7 +5,7 @@ import { RiMoonClearFill, RiSunFill } from 'react-icons/ri'
 import styles from './ThemeSelector.module.css'
 
 export default function ThemeSelector() {
-  const { theme, setTheme } = useTheme()
+  const { setTheme, theme } = useTheme()
 
   return (
     <button

@@ -3,7 +3,6 @@ import { RiMicFill } from 'react-icons/ri'
 
 import ArrowLink from '../components/ArrowLink'
 import Text from '../components/Text'
-
 import styles from './Post.module.css'
 
 interface PostProps {
@@ -28,31 +27,31 @@ export default function Post({
   url,
 }: PostProps) {
   return (
-    <a href={url} target="_blank" rel="noreferrer noopener" className={styles.post}>
+    <a className={styles.post} href={url} rel="noreferrer noopener" target="_blank">
       <article className={styles.article}>
         <div className={styles.infos}>
           <div className={styles.image}>
-            <Image fill placeholder="blur" src={image} alt={`${name} cover`} />
+            <Image alt={`${name} cover`} fill placeholder="blur" src={image} />
           </div>
           <div className={styles.metas}>
-            <Text variant="sm" className={styles.meta}>
+            <Text className={styles.meta} variant="sm">
               {date}
             </Text>
-            <Text variant="sm" className={styles.meta}>
+            <Text className={styles.meta} variant="sm">
               {time}
             </Text>
             <Text>{isFrench ? '🇫🇷' : '🇬🇧'}</Text>
           </div>
         </div>
         <div>
-          <Text variant="h2" className={styles.title}>
+          <Text className={styles.title} variant="h2">
             {isPodcast && <RiMicFill className={styles.mic} />}
             {name}
           </Text>
-          <Text variant="sm" className={styles.description}>
+          <Text className={styles.description} variant="sm">
             {description}
           </Text>
-          <ArrowLink variant="sm" className={styles.more}>
+          <ArrowLink className={styles.more} variant="sm">
             {isPodcast ? 'Listen' : 'Read more'}
           </ArrowLink>
         </div>

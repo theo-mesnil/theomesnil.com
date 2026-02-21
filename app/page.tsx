@@ -1,7 +1,6 @@
 import theomesnilImage from '../public/projects/theo-mesnil.jpg'
 import welcomeUiImage from '../public/projects/welcome-ui.jpg'
 import whatToWatchImage from '../public/projects/what-to-watch.jpg'
-
 import Heading from './components/Heading'
 import Text from './components/Text'
 import styles from './page.module.css'
@@ -9,28 +8,28 @@ import Project from './Project'
 
 const projects = [
   {
-    name: 'Welcome UI',
-    github: 'WTTJ/welcome-ui',
-    image: welcomeUiImage,
     description:
       'Customizable design system library made with react, typescript, styled-components and reakit.',
+    github: 'WTTJ/welcome-ui',
+    image: welcomeUiImage,
+    name: 'Welcome UI',
     stars: '~600',
   },
   {
-    name: 'WhatToWatch',
-    github: 'theo-mesnil/WhatToWatch',
-    image: whatToWatchImage,
     description:
       'WhatToWatch is the simplest and fastest way to discover movies, series, and where to watch them.',
+    github: 'theo-mesnil/WhatToWatch',
+    image: whatToWatchImage,
+    name: 'WhatToWatch',
     stars: '~20',
   },
   {
-    name: 'theomesnil.com',
+    description: 'This website is open source, you can check the code source on github :)',
     github: 'theo-mesnil/theomesnil.com',
     image: theomesnilImage,
-    description: 'This website is open source, you can check the code source on github :)',
-    withBorder: true,
+    name: 'theomesnil.com',
     stars: '3',
+    withBorder: true,
   },
 ]
 

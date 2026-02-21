@@ -3,25 +3,16 @@ import { RiArrowRightLine } from 'react-icons/ri'
 
 import styles from './index.module.css'
 
+interface ArrowLinkChildrenProps {
+  children: React.ReactNode
+}
+
 interface ArrowLinkProps {
   children: React.ReactNode
   className?: string
   href?: string
   isNextLink?: boolean
   variant?: 'md' | 'sm'
-}
-
-interface ArrowLinkChildrenProps {
-  children: React.ReactNode
-}
-
-function ArrowLinkContent({ children }: ArrowLinkChildrenProps) {
-  return (
-    <>
-      {children}
-      <RiArrowRightLine className={styles.icon} />
-    </>
-  )
 }
 
 export default function ArrowLink({
@@ -42,16 +33,25 @@ export default function ArrowLink({
   } else {
     if (isNextLink) {
       return (
-        <Link href={href} className={classNames}>
+        <Link className={classNames} href={href}>
           <ArrowLinkContent>{children}</ArrowLinkContent>
         </Link>
       )
     }
 
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={classNames}>
+      <a className={classNames} href={href} rel="noopener noreferrer" target="_blank">
         <ArrowLinkContent>{children}</ArrowLinkContent>
       </a>
     )
   }
+}
+
+function ArrowLinkContent({ children }: ArrowLinkChildrenProps) {
+  return (
+    <>
+      {children}
+      <RiArrowRightLine className={styles.icon} />
+    </>
+  )
 }

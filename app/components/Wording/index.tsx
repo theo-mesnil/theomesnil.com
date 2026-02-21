@@ -1,5 +1,4 @@
 import Text from '../Text'
-
 import styles from './index.module.css'
 
 interface WordingProps {
@@ -9,7 +8,7 @@ interface WordingProps {
 
 export default function Wording({ children, className }: WordingProps) {
   return (
-    <Text className={`${styles.wording} ${className}`} as="p">
+    <Text as="p" className={`${styles.wording} ${className}`}>
       {children}
     </Text>
   )
