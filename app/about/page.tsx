@@ -1,18 +1,30 @@
 import Image from 'next/image'
+import { SiCss3, SiFigma, SiJavascript, SiReact, SiTypescript } from 'react-icons/si'
 
 import meImage from '../../public/about/me.jpg'
 import ArrowLink from '../components/ArrowLink'
 import Heading from '../components/Heading'
-import Icon from '../components/Icon'
 import Text from '../components/Text'
 import Wording from '../components/Wording'
-
 import Experience from './Experience'
 import styles from './page.module.css'
 
 const experiences = [
   {
+    company: 'PMU',
+    link: 'https://www.pmu.fr',
+    startDate: '02/18/2026',
+    subJobs: [
+      {
+        stack: ['React Native', 'Typescript'],
+        startDate: '02/18/2026',
+        title: 'Lead Front-End Developer',
+      },
+    ],
+  },
+  {
     company: 'Welcome to the jungle',
+    endDate: '02/17/2026',
     link: 'https://www.welcometothejungle.com',
     startDate: '05/01/2019',
     subJobs: [
@@ -25,31 +37,30 @@ const experiences = [
         ],
         stack: ['ReactJS', 'Typescript', 'Styled component', 'NextJS', 'CircleCI', 'Figma'],
         startDate: '01/01/2021',
-        title: 'Senior frontend developer',
+        title: 'Senior Front-End Developer',
       },
       {
-        title: 'Confirmed frontend developer',
-        startDate: '05/01/2019',
         endDate: '01/01/2021',
+        startDate: '05/01/2019',
+        title: 'Confirmed Front-End Developer',
       },
     ],
-    title: 'Senior frontend developer',
   },
   {
     company: 'Leboncoin',
+    endDate: '04/01/2019',
     link: 'https://www.leboncoin.com',
+    startDate: '08/01/2017',
     subJobs: [
       {
         description: [
           'Transitioned a legacy app to a ReactJS platform on the deposit funnel, the ad page, and a holiday bookings funnel',
           'Proof of concept for a design system',
         ],
-        title: 'Frontend developer',
         stack: ['ReactJS', 'Redux', 'Styled component', 'Sketch'],
+        title: 'Front-End Developer',
       },
     ],
-    endDate: '04/01/2019',
-    startDate: '08/01/2017',
   },
   {
     company: 'Canalplus',
@@ -58,25 +69,25 @@ const experiences = [
     startDate: '04/01/2013',
     subJobs: [
       {
-        title: 'Frontend developer - Interfaces & Experiences',
-        startDate: '01/01/2015',
-        endDate: '07/01/2017',
         description: [
           'Migrated myCanal platform to ReactJS',
           'Created C8 & CSTAR replay platform',
           'Crafted websites for special TV operations',
         ],
+        endDate: '07/01/2017',
         stack: ['ReactJS', 'Angular', 'SCSS'],
+        startDate: '01/01/2015',
+        title: 'Front-End Developer - Interfaces & Experiences',
       },
       {
-        title: 'Web Developer & Designer at Canalplay',
-        startDate: '10/01/2013',
         endDate: '12/01/2014',
+        startDate: '10/01/2013',
+        title: 'Web Developer & Designer at Canalplay',
       },
       {
-        title: 'Intership - Assistant Project Manager',
-        startDate: '04/01/2013',
         endDate: '09/01/2014',
+        startDate: '04/01/2013',
+        title: 'Internship - Assistant Project Manager',
       },
     ],
   },
@@ -97,44 +108,48 @@ export default function About() {
             <>
               Hello, i’m Théo <span className={styles.emoji}>:)</span>
               <br />
-              I’m a front-end developer with over 10 years of experiences
+              I’m a Lead Front-End Developer with over 10 years of experiences
             </>
           }
         >
           based in Paris and currently at{' '}
-          <a href="https://www.welcometothejungle.com" target="_blank" rel="noopener noreferrer">
-            Welcome to the jungle
+          <a href="https://www.pmu.fr" rel="noopener noreferrer" target="_blank">
+            PMU
           </a>
           . I was previously at{' '}
-          <a href="https://www.leboncoin.fr" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.welcometothejungle.com" rel="noopener noreferrer" target="_blank">
+            Welcome to the jungle
+          </a>
+          ,{' '}
+          <a href="https://www.leboncoin.fr" rel="noopener noreferrer" target="_blank">
             Leboncoin
           </a>{' '}
           and{' '}
-          <a href="https://www.canalplus.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.canalplus.com/" rel="noopener noreferrer" target="_blank">
             Canalplus
           </a>
-          . I bring a deep passion for crafting engaging web interfaces and enhancing user
-          experiences with ReactJS and Typescript.
+          . I bring a deep passion for crafting engaging web and mobile interfaces and enhancing
+          user experiences with ReactJS, React Native and Typescript.
         </Heading>
         <div className={styles.meImage}>
-          <Image fill placeholder="blur" src={meImage} alt="Théo Mesnil" />
+          <Image alt="Théo Mesnil" fill placeholder="blur" src={meImage} />
         </div>
       </section>
       <Wording className={styles.life}>
         I lived all my childhood in Guadeloupe 🏝 I’ve studied at Supinfo, first 2 years in
         Guadeloupe then last 3 years in Montréal. Then i moved to Paris to start my final study
-        internship. I also love play games: Microsoft Flight simulator, Age of Empire...
+        internship. I also love play games: Age of Empire, Stardew Valley, MSFS...
       </Wording>
       <ArrowLink className={styles.resume} href="theo-mesnil-resume.pdf" variant="sm">
         Check my resume
       </ArrowLink>
       <section className={styles.experiences}>
         <div className={styles.logos}>
-          <Icon name="javascript" />
-          <Icon name="react" />
-          <Icon name="typescript" />
-          <Icon name="css" />
-          <Icon name="figma" />
+          <SiJavascript />
+          <SiReact />
+          <SiTypescript />
+          <SiCss3 />
+          <SiFigma />
         </div>
         <Text variant="section">Experiences</Text>
         <div className={styles.jobs}>

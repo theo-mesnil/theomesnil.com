@@ -11,29 +11,27 @@ import './styles/global.css'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={robotoFont.className} suppressHydrationWarning>
+    <html className={robotoFont.className} lang="en" suppressHydrationWarning>
       <head>
-        <title>Théo Mesnil _ Senior front-end developer in Paris</title>
+        <title>Théo Mesnil / Lead Front-End Developer in Paris</title>
         <meta
+          content="Hello, I’m Théo :) I’m a Lead Front-End Developer with over 10 years of experiences based in Paris and currently at PMU."
           name="description"
-          content="Hello, i’m Théo :) I’m a front-end developer with over 8 years of experiences
-          based in Paris and currently at Welcome to the jungle."
         />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Théo Mesnil" />
+        <meta content="website" property="og:type" />
+        <meta content="Théo Mesnil" property="og:title" />
         <meta
+          content="Hello, I’m Théo :) I’m a Lead Front-End Developer with over 10 years of experiences based in Paris and currently at PMU."
           property="og:description"
-          content="Hello, i’m Théo :) I’m a front-end developer with over 8 years of experiences
-          based in Paris and currently at Welcome to the jungle."
         />
         <meta
-          property="og:image"
           content="https://repository-images.githubusercontent.com/558503992/a06e1611-e929-4af2-9e68-9234a58c14f3"
+          property="og:image"
         />
-        <meta name="viewport" content="width=device-width,minimum-scale=1" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@theomesnil" />
-        <meta name="twitter:creator" content="@theomesnil" />
+        <meta content="width=device-width,minimum-scale=1" name="viewport" />
+        <meta content="summary" name="twitter:card" />
+        <meta content="@theomesnil" name="twitter:site" />
+        <meta content="@theomesnil" name="twitter:creator" />
       </head>
       <body>
         <ThemeProvider>

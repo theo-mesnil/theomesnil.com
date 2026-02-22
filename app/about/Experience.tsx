@@ -1,24 +1,6 @@
 import ArrowLink from '../components/ArrowLink'
 import Text from '../components/Text'
-
 import styles from './Experience.module.css'
-
-function yearsAndMonthsBetweenDates(startDate: string, endDate?: string) {
-  const start = new Date(startDate)
-  const end = endDate ? new Date(endDate) : new Date()
-
-  const monthsBetweenDates =
-    (end.getFullYear() - start.getFullYear()) * 12 - start.getMonth() + end.getMonth()
-
-  if (monthsBetweenDates < 12) return `${monthsBetweenDates}m`
-
-  const years = Math.floor(monthsBetweenDates / 12)
-  const months = monthsBetweenDates - years * 12
-
-  if (months === 0) return `${years}y`
-
-  return `${years}y ${months + 1}m`
-}
 
 interface ExperienceProps {
   company: string
@@ -27,31 +9,25 @@ interface ExperienceProps {
   startDate: string
   subJobs?: {
     description?: string[]
-    stack?: string[]
     endDate?: string
+    stack?: string[]
     startDate?: string
     title: string
   }[]
 }
 
-function getDateFormatted(date: string) {
-  return `${new Date(date).toLocaleString('en-GB', { month: 'short' })} ${new Date(
-    date
-  ).getFullYear()}`
-}
-
 export default function Experience({
-  subJobs,
-  startDate,
-  endDate,
   company,
+  endDate,
   link,
+  startDate,
+  subJobs,
 }: ExperienceProps) {
   return (
     <article>
       <div>
         <ArrowLink href={link}>{company}</ArrowLink>
-        <Text variant="xs" as="div" className={styles.subtitle}>
+        <Text as="div" className={styles.subtitle} variant="xs">
           {getDateFormatted(startDate)} / {endDate ? getDateFormatted(endDate) : 'Now'}
           {` (${yearsAndMonthsBetweenDates(startDate, endDate)})`}
         </Text>
@@ -60,11 +36,11 @@ export default function Experience({
         <div className={styles.subJobs}>
           {subJobs.map(subJob => (
             <div className={styles.subJob} key={`experience_${company}_subJob_${subJob.title}`}>
-              <Text className={styles.subJobTitle} as="div">
+              <Text as="div" className={styles.subJobTitle}>
                 {subJob.title}
               </Text>
               {subJob.startDate && (
-                <Text variant="xs" as="div">
+                <Text as="div" variant="xs">
                   {getDateFormatted(subJob.startDate)} /{' '}
                   {subJob.endDate ? getDateFormatted(subJob.endDate) : 'Now'}
                   {` (${yearsAndMonthsBetweenDates(subJob.startDate, subJob.endDate)})`}
@@ -100,4 +76,27 @@ export default function Experience({
       )}
     </article>
   )
+}
+
+function getDateFormatted(date: string) {
+  return `${new Date(date).toLocaleString('en-GB', { month: 'short' })} ${new Date(
+    date
+  ).getFullYear()}`
+}
+
+function yearsAndMonthsBetweenDates(startDate: string, endDate?: string) {
+  const start = new Date(startDate)
+  const end = endDate ? new Date(endDate) : new Date()
+
+  const monthsBetweenDates =
+    (end.getFullYear() - start.getFullYear()) * 12 - start.getMonth() + end.getMonth()
+
+  if (monthsBetweenDates < 12) return `${monthsBetweenDates}m`
+
+  const years = Math.floor(monthsBetweenDates / 12)
+  const months = monthsBetweenDates - years * 12
+
+  if (months === 0) return `${years}y`
+
+  return `${years}y ${months + 1}m`
 }
