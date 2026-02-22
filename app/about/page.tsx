@@ -11,7 +11,20 @@ import styles from './page.module.css'
 
 const experiences = [
   {
+    company: 'PMU',
+    link: 'https://www.pmu.fr',
+    startDate: '02/18/2026',
+    subJobs: [
+      {
+        stack: ['React Native', 'Typescript'],
+        startDate: '02/18/2026',
+        title: 'Lead Front-End Developer',
+      },
+    ],
+  },
+  {
     company: 'Welcome to the jungle',
+    endDate: '02/17/2026',
     link: 'https://www.welcometothejungle.com',
     startDate: '05/01/2019',
     subJobs: [
@@ -24,15 +37,14 @@ const experiences = [
         ],
         stack: ['ReactJS', 'Typescript', 'Styled component', 'NextJS', 'CircleCI', 'Figma'],
         startDate: '01/01/2021',
-        title: 'Senior frontend developer',
+        title: 'Senior Front-End Developer',
       },
       {
         endDate: '01/01/2021',
         startDate: '05/01/2019',
-        title: 'Confirmed frontend developer',
+        title: 'Confirmed Front-End Developer',
       },
     ],
-    title: 'Senior frontend developer',
   },
   {
     company: 'Leboncoin',
@@ -46,7 +58,7 @@ const experiences = [
           'Proof of concept for a design system',
         ],
         stack: ['ReactJS', 'Redux', 'Styled component', 'Sketch'],
-        title: 'Frontend developer',
+        title: 'Front-End Developer',
       },
     ],
   },
@@ -65,7 +77,7 @@ const experiences = [
         endDate: '07/01/2017',
         stack: ['ReactJS', 'Angular', 'SCSS'],
         startDate: '01/01/2015',
-        title: 'Frontend developer - Interfaces & Experiences',
+        title: 'Front-End Developer - Interfaces & Experiences',
       },
       {
         endDate: '12/01/2014',
@@ -75,7 +87,7 @@ const experiences = [
       {
         endDate: '09/01/2014',
         startDate: '04/01/2013',
-        title: 'Intership - Assistant Project Manager',
+        title: 'Internship - Assistant Project Manager',
       },
     ],
   },
@@ -96,15 +108,19 @@ export default function About() {
             <>
               Hello, i’m Théo <span className={styles.emoji}>:)</span>
               <br />
-              I’m a front-end developer with over 10 years of experiences
+              I’m a Lead Front-End Developer with over 10 years of experiences
             </>
           }
         >
           based in Paris and currently at{' '}
+          <a href="https://www.pmu.fr" rel="noopener noreferrer" target="_blank">
+            PMU
+          </a>
+          . I was previously at{' '}
           <a href="https://www.welcometothejungle.com" rel="noopener noreferrer" target="_blank">
             Welcome to the jungle
           </a>
-          . I was previously at{' '}
+          ,{' '}
           <a href="https://www.leboncoin.fr" rel="noopener noreferrer" target="_blank">
             Leboncoin
           </a>{' '}
@@ -112,8 +128,8 @@ export default function About() {
           <a href="https://www.canalplus.com/" rel="noopener noreferrer" target="_blank">
             Canalplus
           </a>
-          . I bring a deep passion for crafting engaging web interfaces and enhancing user
-          experiences with ReactJS and Typescript.
+          . I bring a deep passion for crafting engaging web and mobile interfaces and enhancing
+          user experiences with ReactJS, React Native and Typescript.
         </Heading>
         <div className={styles.meImage}>
           <Image alt="Théo Mesnil" fill placeholder="blur" src={meImage} />
@@ -122,7 +138,7 @@ export default function About() {
       <Wording className={styles.life}>
         I lived all my childhood in Guadeloupe 🏝 I’ve studied at Supinfo, first 2 years in
         Guadeloupe then last 3 years in Montréal. Then i moved to Paris to start my final study
-        internship. I also love play games: Microsoft Flight simulator, Age of Empire...
+        internship. I also love play games: Age of Empire, Stardew Valley, MSFS...
       </Wording>
       <ArrowLink className={styles.resume} href="theo-mesnil-resume.pdf" variant="sm">
         Check my resume

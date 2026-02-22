@@ -9,19 +9,18 @@ import Project from './Project'
 const projects = [
   {
     description:
-      'Customizable design system library made with react, typescript, styled-components and reakit.',
+      'Customizable design system library made with react, typescript, tailwindcss and ariakit.',
     github: 'WTTJ/welcome-ui',
     image: welcomeUiImage,
     name: 'Welcome UI',
-    stars: '~600',
+    stars: '~650',
   },
   {
-    description:
-      'WhatToWatch is the simplest and fastest way to discover movies, series, and where to watch them.',
+    description: 'WhatToWatch is the simplest and fastest way to discover movies and series',
     github: 'theo-mesnil/WhatToWatch',
     image: whatToWatchImage,
     name: 'WhatToWatch',
-    stars: '~20',
+    stars: '~30',
   },
   {
     description: 'This website is open source, you can check the code source on github :)',
@@ -37,12 +36,13 @@ export default function Home() {
   return (
     <>
       <section>
-        <Heading title="Senior front-end developer in Paris who likes interfaces 💅">
-          With a decade of experience as a frontend developer, I bring a deep passion for crafting
-          engaging web interfaces and enhancing user experiences with ReactJS and Typescript. I take
-          pride in my contributions to projects such as MyCanal, the migration of Leboncoin and the
-          design system for Welcome to the Jungle. I enjoy contributing to both product and
-          technical decisions and actively participating in shaping future developments.
+        <Heading title="Lead Front-End Developer in Paris who likes interfaces 🌞">
+          With a decade of experience as a front-end developer, I bring a deep passion for crafting
+          engaging web and mobile interfaces and enhancing user experiences with ReactJS, React
+          Native and Typescript. I take pride in my contributions to projects such as MyCanal, the
+          migration of Leboncoin and the design system for Welcome to the Jungle. I enjoy
+          contributing to both product and technical decisions and actively participating in shaping
+          future developments.
         </Heading>
       </section>
       <section className={styles.projectsSection}>
