@@ -13,17 +13,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html className={robotoFont.className} lang="en" suppressHydrationWarning>
       <head>
-        <title>Théo Mesnil _ Senior front-end developer in Paris</title>
+        <title>Théo Mesnil / Lead Front-End Developer in Paris</title>
         <meta
-          content="Hello, i’m Théo :) I’m a front-end developer with over 8 years of experiences
-          based in Paris and currently at Welcome to the jungle."
+          content="Hello, I’m Théo :) I’m a Lead Front-End Developer with over 10 years of experiences based in Paris and currently at PMU."
           name="description"
         />
         <meta content="website" property="og:type" />
         <meta content="Théo Mesnil" property="og:title" />
         <meta
-          content="Hello, i’m Théo :) I’m a front-end developer with over 8 years of experiences
-          based in Paris and currently at Welcome to the jungle."
+          content="Hello, I’m Théo :) I’m a Lead Front-End Developer with over 10 years of experiences based in Paris and currently at PMU."
           property="og:description"
         />
         <meta

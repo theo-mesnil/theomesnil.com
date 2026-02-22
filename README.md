@@ -1,6 +1,6 @@
 # theomesnil.com
 
-Personal website based on nextjs 13 and pure css, deploy on Vercel.
+Personal website based on NextJS 16 and pure css, deploy on Vercel.
 
 <img width="1070" alt="Capture d’écran 2022-11-04 à 15 14 36" src="https://user-images.githubusercontent.com/50322149/199996512-237e7b3a-ca53-4e58-970e-c5803be38966.png">
 
@@ -13,9 +13,9 @@ Personal website based on nextjs 13 and pure css, deploy on Vercel.
 First, run the development server:
 
 ```bash
-npm run dev
+npm run start
 # or
-yarn dev
+yarn start
 ```
 
 Then go to http://localhost:3000
