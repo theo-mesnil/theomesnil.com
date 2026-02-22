@@ -1,7 +1,11 @@
 html {
-  font-size: 100%;
+  font-size: 13px;
   font-weight: var(--fontWeight-regular);
   line-height: 1.5;
+
+  @media (min-width: 736px) {
+    font-size: 16px;
+  }
 }
 
 body {
