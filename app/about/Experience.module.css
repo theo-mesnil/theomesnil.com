@@ -42,9 +42,9 @@
 }
 
 .stacksItem {
-  font-size: var(--fontSize-sm);
+  font-size: var(--fontSize-xs);
   color: var(--color-dark-900);
   background-color: var(--color-dark-50);
-  padding: var(--space-xs) var(--space-sm);
+  padding: var(--space-xs) var(--space-md);
   border-radius: 100px;
 }

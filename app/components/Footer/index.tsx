@@ -1,5 +1,6 @@
 import { IconType } from 'react-icons'
-import { SiBluesky, SiDribbble, SiGithub, SiLinkedin, SiTwitch } from 'react-icons/si'
+import { RiLinkedinBoxFill } from 'react-icons/ri'
+import { SiBluesky, SiDribbble, SiGithub, SiTwitch } from 'react-icons/si'
 
 import ArrowLink from '../ArrowLink'
 import Text from '../Text'
@@ -24,7 +25,7 @@ const socials: Social[] = [
   },
   { icon: SiDribbble, name: 'Dribbble', url: 'https://dribbble.com/theomesnil' },
   { icon: SiTwitch, name: 'Twitch', url: 'https://www.twitch.tv/theomtl' },
-  { icon: SiLinkedin, name: 'Linkedin', url: 'https://www.linkedin.com/in/theomesnil/' },
+  { icon: RiLinkedinBoxFill, name: 'Linkedin', url: 'https://www.linkedin.com/in/theomesnil/' },
 ]
 
 export default function Footer() {
