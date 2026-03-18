@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { SiCss3, SiFigma, SiJavascript, SiReact, SiTypescript } from 'react-icons/si'
+import { FaCss3Alt } from 'react-icons/fa'
+import { SiFigma, SiJavascript, SiReact, SiTypescript } from 'react-icons/si'
 
 import meImage from '../../public/about/me.jpg'
 import ArrowLink from '../components/ArrowLink'
@@ -148,7 +149,7 @@ export default function About() {
           <SiJavascript />
           <SiReact />
           <SiTypescript />
-          <SiCss3 />
+          <FaCss3Alt />
           <SiFigma />
         </div>
         <Text variant="section">Experiences</Text>
