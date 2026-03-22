@@ -1,3 +1,4 @@
+import flyTogetherImage from '../public/projects/fly-together.jpg'
 import theomesnilImage from '../public/projects/theo-mesnil.jpg'
 import welcomeUiImage from '../public/projects/welcome-ui.jpg'
 import whatToWatchImage from '../public/projects/what-to-watch.jpg'
@@ -14,6 +15,14 @@ const projects = [
     image: welcomeUiImage,
     name: 'Welcome UI',
     stars: '~650',
+  },
+  {
+    description:
+      'A place for virtual pilots to connect, organize flights together, and share their passion',
+    github: 'theo-mesnil/FlyTogether',
+    image: flyTogetherImage,
+    name: 'FlyTogether',
+    stars: '~0',
   },
   {
     description: 'WhatToWatch is the simplest and fastest way to discover movies and series',
