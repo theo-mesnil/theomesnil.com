@@ -1,7 +1,6 @@
 .item {
   display: flex;
   align-items: center;
-  justify-items: center;
   gap: var(--space-sm);
   background-color: var(--color-primary);
   color: var(--color-light-900);

@@ -10,7 +10,7 @@ export const Button = ({ children, className, icon: Icon, ...rest }: ButtonProps
   return (
     <a className={styles.button} rel="noreferrer noopener" target="_blank" {...rest}>
       <div className={`${styles.item}${className ? ` ${className}` : ''}`}>
-        {Icon && <Icon className={styles.icon} />}
+        {Icon && <Icon />}
         {children}
       </div>
     </a>
