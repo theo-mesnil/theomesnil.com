@@ -1,0 +1,30 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: var(--space-sm);
+  background-color: var(--color-primary);
+  color: var(--color-light-900);
+  border-radius: var(--space-rounded);
+  font-weight: var(--fontWeight-medium);
+  padding: var(--space-xs) var(--space-md);
+  outline: 2px solid transparent;
+  outline-offset: 0px;
+  transition:
+    outline 300ms,
+    outline-offset 300ms;
+}
+
+.button {
+  text-decoration: none;
+}
+
+.button:focus-visible {
+  outline: none;
+}
+
+.button:hover .item,
+.button:focus-visible .item {
+  outline: 2px solid var(--color-primary);
+  outline-offset: var(--space-xxs);
+}
