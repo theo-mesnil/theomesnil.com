@@ -5,9 +5,9 @@ import whatToWatchImage from '../public/projects/what-to-watch.jpg'
 import Heading from './components/Heading'
 import Text from './components/Text'
 import styles from './page.module.css'
-import Project from './Project'
+import Project, { ProjectProps } from './Project'
 
-const projects = [
+const projects: ProjectProps[] = [
   {
     description:
       'Customizable design system library made with react, typescript, tailwindcss and ariakit.',
@@ -20,6 +20,7 @@ const projects = [
     description:
       'A place for virtual pilots to connect, organize flights together, and share their passion',
     github: 'theo-mesnil/FlyTogether',
+    googlePlay: 'com.theomesnil.FlyTogether',
     image: flyTogetherImage,
     name: 'FlyTogether',
     stars: '~0',
@@ -27,6 +28,7 @@ const projects = [
   {
     description: 'WhatToWatch is the simplest and fastest way to discover movies and series',
     github: 'theo-mesnil/WhatToWatch',
+    googlePlay: 'com.theomesnil.WhatToWatch',
     image: whatToWatchImage,
     name: 'WhatToWatch',
     stars: '~30',
@@ -37,7 +39,6 @@ const projects = [
     image: theomesnilImage,
     name: 'theomesnil.com',
     stars: '3',
-    withBorder: true,
   },
 ]
 
