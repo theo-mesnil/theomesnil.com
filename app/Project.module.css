@@ -1,6 +1,9 @@
 .project {
   color: inherit;
   text-decoration: none;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-dark-100);
+  padding: var(--space-lg);
 }
 
 .title {
@@ -12,7 +15,6 @@
 .description {
   max-width: 21rem;
   display: block;
-  margin-bottom: var(--space-lg);
 }
 
 .stars {
@@ -31,23 +33,14 @@
   position: relative;
   display: block;
   width: 100%;
+  overflow: hidden;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius);
-  overflow: hidden;
-  outline: 3px solid transparent;
-  outline-offset: 0px;
-  border: 1px solid var(--color-dark-200);
-  transition:
-    outline 300ms,
-    outline-offset 300ms;
+  border: 1px solid var(--color-dark-50);
 }
 
-.project:focus-visible {
-  outline: none;
-}
-
-.project:hover .image,
-.project:focus-visible .image {
-  outline: 3px solid var(--color-primary);
-  outline-offset: var(--space-xs);
+.buttons {
+  display: flex;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0 var(--space-lg);
 }
