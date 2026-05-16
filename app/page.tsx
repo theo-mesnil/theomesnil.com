@@ -17,6 +17,7 @@ const projects: ProjectProps[] = [
     stars: '~650',
   },
   {
+    appleStore: 'flytogether-ivao-companion/id6761731133',
     description:
       'A place for virtual pilots to connect, organize flights together, and share their passion',
     github: 'theo-mesnil/FlyTogether',
