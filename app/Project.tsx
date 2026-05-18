@@ -9,11 +9,11 @@ import styles from './Project.module.css'
 export type ProjectProps = {
   appleStore?: string
   description: string
-  github: string
+  github?: string
   googlePlay?: string
   image: ImageProps['src']
   name: string
-  stars: string
+  stars?: string
 }
 
 export default function Project({
@@ -29,18 +29,22 @@ export default function Project({
     <article className={styles.project}>
       <div className={styles.title}>
         <Text variant="h3">{name}</Text>
-        <Text className={styles.stars} variant="xs">
-          {stars}
-          <RiStarFill className={styles.icon} />
-        </Text>
+        {stars && (
+          <Text className={styles.stars} variant="xs">
+            {stars}
+            <RiStarFill className={styles.icon} />
+          </Text>
+        )}
       </div>
       <Text className={styles.description} variant="sm">
         {description}
       </Text>
       <div className={styles.buttons}>
-        <Button href={`https://www.github.com/${github}`} icon={SiGithub}>
-          Github
-        </Button>
+        {github && (
+          <Button href={`https://www.github.com/${github}`} icon={SiGithub}>
+            Github
+          </Button>
+        )}
         {appleStore && (
           <Button href={`https://apps.apple.com/us/app/${appleStore}`} icon={SiApple}>
             App Store
