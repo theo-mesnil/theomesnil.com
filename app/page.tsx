@@ -15,6 +15,7 @@ const projects: ProjectProps[] = [
     image: welcomeUiImage,
     name: 'Welcome UI',
     stars: '~650',
+    website: 'https://www.welcome-ui.com',
   },
   {
     appleStore: 'flytogether-ivao-companion/id6761731133',
@@ -26,11 +27,9 @@ const projects: ProjectProps[] = [
   },
   {
     description: 'WhatToWatch is the simplest and fastest way to discover movies and series',
-    github: 'theo-mesnil/WhatToWatch',
     googlePlay: 'com.theomesnil.WhatToWatch',
     image: whatToWatchImage,
     name: 'WhatToWatch',
-    stars: '~30',
   },
   {
     description: 'This website is open source, you can check the code source on github :)',
