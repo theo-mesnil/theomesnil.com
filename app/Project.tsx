@@ -1,5 +1,5 @@
 import Image, { ImageProps } from 'next/image'
-import { RiStarFill } from 'react-icons/ri'
+import { RiEarthFill, RiStarFill } from 'react-icons/ri'
 import { SiApple, SiGithub, SiGoogleplay } from 'react-icons/si'
 
 import { Button } from './components/Button'
@@ -14,6 +14,7 @@ export type ProjectProps = {
   image: ImageProps['src']
   name: string
   stars?: string
+  website?: string
 }
 
 export default function Project({
@@ -24,6 +25,7 @@ export default function Project({
   image,
   name,
   stars,
+  website,
 }: ProjectProps) {
   return (
     <article className={styles.project}>
@@ -43,6 +45,11 @@ export default function Project({
         {github && (
           <Button href={`https://www.github.com/${github}`} icon={SiGithub}>
             Github
+          </Button>
+        )}
+        {website && (
+          <Button href={website} icon={RiEarthFill} rel="noopener referer" target="_blank">
+            Visit Website
           </Button>
         )}
         {appleStore && (
