@@ -26,6 +26,7 @@ const projects: ProjectProps[] = [
     name: 'FlyTogether',
   },
   {
+    appleStore: 'whattowatch-votre-guide-ultime/id6761733801',
     description: 'WhatToWatch is the simplest and fastest way to discover movies and series',
     googlePlay: 'com.theomesnil.WhatToWatch',
     image: whatToWatchImage,
